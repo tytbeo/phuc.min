@@ -10,7 +10,7 @@ package lab1_ss3;
  * @author Phuc
  */
 public class SoNguyenTo {
-    public int a = 0;
+    public int a;
 
     public int getA() {
         return this.a;
@@ -38,7 +38,7 @@ public class SoNguyenTo {
     }
     boolean isSoNguyenTo(int x){
         int count = 1;
-        for (int i = 1;i < x; i++){
+        for (int i = 1;i <= x; i++){
             
             if (x%i==0){
                     count++;
@@ -56,14 +56,8 @@ public class SoNguyenTo {
         
 
         for ( int i = this.getA() + 1 ; ; i++){
-            int count = 0;
-
-            for(int j = 1;j<=i;j++){
-                if (i%j==0){
-                    count ++;
-                }
-            }
-            if ( count ==2 ){
+        
+            if ( this.isSoNguyenTo(i) ){
                     NextNumber = i;
                     break;
                 }
