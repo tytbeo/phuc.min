@@ -37,7 +37,7 @@ public class SoNguyenTo {
         
     }
     boolean isSoNguyenTo(int x){
-        int count = 1;
+        int count = 0;
         for (int i = 1;i <= x; i++){
             
             if (x%i==0){
